@@ -34,7 +34,7 @@ def distance(x1: float, x2: float, y1: float, y2: float) -> float:
 
 
 def read_from_file() -> VectorOfCircles:
-    with open("input.txt", "r") as f:
+    with open("test1.txt", "r") as f:
         arr = []
         for s in f.readlines():
             pattern = re.compile("[\d\.]+")
@@ -50,7 +50,7 @@ def read_from_file() -> VectorOfCircles:
 def write_to_file(arr: VectorOfCircles):
     with open("output.txt", "w") as f:
         for i in range(0, len(arr)):
-            f.write("%g %g %g" % (arr[i].x0, arr[i].y0, arr[i].radius))
+            f.write("%g %g %g\n" % (arr[i].x0, arr[i].y0, arr[i].radius))
 
 
 def main():
